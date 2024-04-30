@@ -23,8 +23,11 @@ android {
     }
 
     buildTypes {
+        debug {
+            isMinifyEnabled = true
+        }
         release {
-            isMinifyEnabled = false
+            isMinifyEnabled = true
             proguardFiles(
                 getDefaultProguardFile("proguard-android-optimize.txt"),
                 "proguard-rules.pro"
@@ -69,6 +72,7 @@ dependencies {
     implementation(libs.retrofit.scalars)
     implementation(libs.retrofit.serialization)
     implementation(libs.okhttp.logging)
+    implementation(libs.error.prone.annotations)
 
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
