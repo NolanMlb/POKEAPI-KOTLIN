@@ -28,6 +28,7 @@ class StoreRepository(private val endpoint: StoreEndpoint) {
             val typesResponse = endpoint.getAllTypes()
             typesResponse.results
         } catch (e: Exception) {
+            println("error")
             Log.e(TAG, e.message.toString())
             listOf()
         }

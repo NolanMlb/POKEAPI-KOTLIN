@@ -15,7 +15,6 @@ retrofitSerialization = "1.0.0"
 okHttp = "4.12.0"
 coil = "2.6.0"
 composeNavigation = "2.5.3"
-error_prone = "2.10.0"
 
 [libraries]
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
@@ -48,9 +47,6 @@ retrofit-scalars = { group = "com.squareup.retrofit2", name = "converter-scalars
 retrofit-serialization = { group = "com.jakewharton.retrofit", name = "retrofit2-kotlinx-serialization-converter", version.ref ="retrofitSerialization"  }
 #okhttp logger pour permettre les logs avec retrofit
 okhttp-logging = { group = "com.squareup.okhttp3", name = "logging-interceptor", version.ref ="okHttp" }
-#Error prone pour ajouter des annotations de détection d'erreurs
-error_prone_annotations = { group = "com.google.errorprone", name = "error_prone_annotations", version.ref = "error_prone" }
-
 
 [plugins]
 androidApplication = { id = "com.android.application", version.ref = "agp" }

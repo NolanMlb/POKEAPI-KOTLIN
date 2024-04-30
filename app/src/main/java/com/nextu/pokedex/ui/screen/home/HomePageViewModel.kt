@@ -75,7 +75,7 @@ class HomePageViewModel(private val storeRepository: StoreRepository) : ViewMode
     }
 
     private suspend fun fetchPokemonsByType(typeName: String) {
-        var result = emptyList<PokemonSummary>()
+        var result: List<PokemonSummary>;
         if (typeName == TYPE_ALL) result = storeRepository.getAllPokemons()
         else result = storeRepository.getPokemonsByType(typeName)
         _state.update { state ->
